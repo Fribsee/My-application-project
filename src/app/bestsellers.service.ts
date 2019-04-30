@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class BestsellersService {
+export class BestSellersService {
 
   private url = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=AuVsSQoz49SlbsT4jA4GsALfWWhznQ4e';
 
