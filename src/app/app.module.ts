@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { BooksComponent } from './books/books.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { LinksComponent } from './links/links.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BestsellersService } from './bestsellers.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { LinksComponent } from './links/links.component';
     LinksComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BestsellersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

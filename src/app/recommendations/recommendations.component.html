@@ -1,5 +1,7 @@
-<div>
-  <div >
-  recommendations works!
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let book of bestsellers.results.books">
+  <a href= book.amazon_product_url>{{ book.title }}</a>
+    </div>
   </div>  
 </div>

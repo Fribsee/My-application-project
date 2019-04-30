@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BestsellersService } from '../bestsellers.service';
 
 @Component({
   selector: 'app-recommendations',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recommendations.component.css']
 })
 export class RecommendationsComponent implements OnInit {
-
-  constructor() { }
+  public bestsellers: any = [];
+  constructor(private bestsellersService: BestsellersService) { }
 
   ngOnInit() {
+    this.bestsellersService.getBestsellers()
+    .subscribe(data => this.bestsellers = data);
   }
 
 }
