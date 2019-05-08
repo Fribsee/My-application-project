@@ -11,6 +11,7 @@ import { BestSellersService } from './bestsellers.service';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { BooksearchComponent } from './header/booksearch/booksearch.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LinksComponent,
     BestSellersComponent,
     RecommendationsComponent,
-    BooksearchComponent
+    BooksearchComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
