@@ -9,8 +9,16 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class BooksearchComponent implements OnInit {
 
   form = new FormGroup ({
-    search: new FormControl()
+    search: new FormControl(),
   });
+
+  getSearch() {
+    return this.form.get('search').value;
+  }
+
+  onClick() {
+    console.log(this.getSearch());
+  }
 
   constructor() { }
 

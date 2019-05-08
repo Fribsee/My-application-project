@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BestSellersService } from './bestsellers.service';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { BooksearchComponent } from './header/booksearch/booksearch.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BooksearchComponent } from './header/booksearch/booksearch.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [BestSellersService],
   bootstrap: [AppComponent]
