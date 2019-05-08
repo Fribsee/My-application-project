@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { BooksearchService } from 'src/app/booksearch.service';
 
 @Component({
   selector: 'app-booksearch',
@@ -12,15 +13,11 @@ export class BooksearchComponent implements OnInit {
     search: new FormControl(),
   });
 
-  getSearch() {
-    return this.form.get('search').value;
-  }
-
   onClick() {
-    console.log(this.getSearch());
+   this.booksearchservice.userSearch = this.form.get('search').value;
+   this.booksearchservice.getBook();
   }
-
-  constructor() { }
+  constructor(private booksearchservice: BooksearchService) { }
 
   ngOnInit() {
   }

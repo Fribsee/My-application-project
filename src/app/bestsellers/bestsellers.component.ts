@@ -8,6 +8,7 @@ import { BestSellersService } from '../bestsellers.service';
 })
 export class BestSellersComponent implements OnInit {
   public bestsellers: any = [];
+
   constructor(private bestSellersService: BestSellersService) { }
 
   ngOnInit() {

@@ -12,6 +12,7 @@ import { RecommendationsComponent } from './recommendations/recommendations.comp
 import { BooksearchComponent } from './header/booksearch/booksearch.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { BooksearchService } from './booksearch.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [BestSellersService],
+  providers: [BestSellersService, BooksearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
