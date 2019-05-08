@@ -8,6 +8,8 @@ import { BestSellersComponent } from './bestsellers/bestsellers.component';
 import { LinksComponent } from './links/links.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BestSellersService } from './bestsellers.service';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { BooksearchComponent } from './header/booksearch/booksearch.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { BestSellersService } from './bestsellers.service';
     HeaderComponent,
     BooksComponent,
     LinksComponent,
-    BestSellersComponent
+    BestSellersComponent,
+    RecommendationsComponent,
+    BooksearchComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,11 @@
   <div class="row">
     <h2>New York Times Bestsellers</h2><hr>
     <div *ngFor="let book of bestsellers.results.books">
-      <a href= "{{ book.amazon_product_url }}">{{ book.rank }}. {{ book.title }}, </a>
+        {{ book.rank }}.
+      <a href= "{{ book.amazon_product_url }}"> {{ book.title }}</a> 
+        <br>
+        <div class="indent"> by {{ book.author }}</div> 
     </div>
-  </div>  
-</div>
+  </div>
+</div>  
+
