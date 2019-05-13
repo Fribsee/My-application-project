@@ -8,14 +8,17 @@ import { BooksearchService } from 'src/app/booksearch.service';
   styleUrls: ['./booksearch.component.css']
 })
 export class BooksearchComponent implements OnInit {
+  public bookSearch: any = [];
 
   form = new FormGroup ({
     search: new FormControl(),
   });
 
   onClick() {
-   this.booksearchservice.userSearch = this.form.get('search').value;
+   this.booksearchservice.userSearch = this.form.get('search').value.replace(/ /g, '+');
    this.booksearchservice.getBook();
+
+
   }
   constructor(private booksearchservice: BooksearchService) { }
 

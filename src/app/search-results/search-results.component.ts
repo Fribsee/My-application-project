@@ -8,6 +8,7 @@ import { BooksearchService } from 'src/app/booksearch.service';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
+  public search: any = [];
 
 
 
