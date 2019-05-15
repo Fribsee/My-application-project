@@ -1,4 +1,8 @@
 <p>
 {{ this.booksearchservice.searchUrl }}
-{{ this.booksearchservice.getSearchResults()}}
+{{ this.booksearchservice.googSearchUrl }}
+{{ this.bookResults | async }}
 </p>
+<button (click)="resultsclick()">
+
+</button>

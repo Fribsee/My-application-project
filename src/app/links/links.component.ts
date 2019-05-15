@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksearchService } from 'src/app/booksearch.service';
 
 @Component({
   selector: 'app-links',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinksComponent implements OnInit {
 
-  constructor() { }
+  constructor(private booksearchservice: BooksearchService) {
+  }
+
 
   ngOnInit() {
   }
