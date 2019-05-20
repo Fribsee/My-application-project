@@ -12,14 +12,11 @@ import { switchMap } from 'rxjs/operators';
 export class SearchResultsComponent implements OnInit {
 public bookResults: any = [];
 
-  constructor(private booksearchservice: BooksearchService) {  }
+  constructor(public booksearchservice: BooksearchService) {
+   }
 
 
   ngOnInit() {
+    this.bookResults = this.booksearchservice.goodreadsData;
   }
-
-  resultsclick() {
-    console.log(this.bookResults);
-  }
-
 }

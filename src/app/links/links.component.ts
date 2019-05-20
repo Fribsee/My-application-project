@@ -8,7 +8,7 @@ import { BooksearchService } from 'src/app/booksearch.service';
 })
 export class LinksComponent implements OnInit {
 
-  constructor(private booksearchservice: BooksearchService) {
+  constructor(public booksearchservice: BooksearchService) {
   }
 
 

@@ -16,15 +16,12 @@ export class BooksearchComponent implements OnInit {
 
   onClick() {
    this.booksearchservice.userSearch = this.form.get('search').value.replace(/ /g, '+');
-   this.booksearchservice.getBook();
-   this.booksearchservice.getBooks();
-
+  //  this.booksearchservice.getBook(this.booksearchservice.userSearch);
   }
-  constructor(private booksearchservice: BooksearchService) { }
+  constructor(public booksearchservice: BooksearchService) { }
 
   ngOnInit()  {
-      this.booksearchservice.getBook()
-      .subscribe(data => this.bookSearch = data);
+
     }
   }
 
