@@ -1,6 +1,7 @@
 <form [formGroup]="form" class="form-inline">
   <div class ="form-group">
    <input 
+   [(ngModel)] = "bookSearch"
     formControlName="search"
     id="search"
     class="form-control" 

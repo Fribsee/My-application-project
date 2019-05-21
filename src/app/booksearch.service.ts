@@ -31,22 +31,15 @@ export class BooksearchService {
 
 
   constructor(private http: HttpClient) {
-    this.http
-    .get(this.goodreadsUrl + this.userSearch)
-    .subscribe(response => this.goodreadsData = this.xmlToJson(response));
   }
-  // getSearchResults() {
-  //       return this.http.get(this.searchUrl);
-  //     }
 
-  // getBooks(searchTerm: string) {
-  //   let goodreadsUrl = 'https://thing/?s=';
-  //   http
-  //     .get(goodreadsUrl + searchTerm)
-  //     .subscribe(response => {
-  //       this.xmlToJson(response)
-  //     });
-  // }
+  getBooks(searchTerm: string) {
+    this.http
+      .get(this.goodreadsUrl + searchTerm)
+      .subscribe(response => {
+        this.xmlToJson(response);
+      });
+  }
 
   // getBook(searchTerm: string) {
 
