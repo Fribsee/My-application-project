@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 })
 export class BooksearchService {
 
-  userSearch: any;
   goodreadsData: any;
   goodreadsUrl = 'https://mighty-beach-cg-cors-48446.herokuapp.com/https://www.goodreads.com/search/index.xml?key=fYhL0nwGO7vKIem3TCJ5g&q=';
 
@@ -34,16 +33,14 @@ export class BooksearchService {
   }
 
   getBooks(searchTerm: string) {
-    this.http
-      .get(this.goodreadsUrl + searchTerm)
-      .subscribe(response => {
+    const goodreadsData =
+      this.http
+        .get(this.goodreadsUrl + searchTerm)
+        .subscribe(response => {
         this.xmlToJson(response);
+        console.log(goodreadsData);
       });
   }
-
-  // getBook(searchTerm: string) {
-
-  // }
 
 }
 
