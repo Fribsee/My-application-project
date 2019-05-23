@@ -1,11 +1,6 @@
 <div class="container-fluid">
   <div class="row">
     <h2>New York Times Bestsellers</h2><hr>
-    <!-- <ng-container 
-      *ngIf="bestsellers?.results?.books; else noBook">
-        Content Loading...
-    </ng-container> -->
-    <!-- <ng-template #noBook> -->
       <div *ngFor="let book of bestsellers?.results?.books">
         {{ book.rank }}.
        <a href= "{{ book.amazon_product_url }}"> {{ book.title }}

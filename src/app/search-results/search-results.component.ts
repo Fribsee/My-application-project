@@ -17,6 +17,5 @@ public bookResults: any = [];
 
 
   ngOnInit() {
-    this.bookResults = this.booksearchservice.goodreadsData;
   }
 }
