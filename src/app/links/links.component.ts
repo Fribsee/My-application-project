@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BooksearchService } from 'src/app/booksearch.service';
+import { BooksearchService } from '../booksearch.service';
 
 @Component({
   selector: 'app-links',
