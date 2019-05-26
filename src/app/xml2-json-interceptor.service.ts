@@ -17,7 +17,7 @@ export class XML2JsonInterceptorService implements HttpInterceptor {
     req = req.clone({ responseType: 'text' });
 
     return next.handle(req).pipe(map(event => {
-      if (event instanceof HttpResponse && event.headers.get('content-type').indexOf('application/xml') >= 0) {
+      if (event instanceof HttpResponse && event.headers.get('content-type').indexOf('text/xml') >= 0) {
         const parser = new DOMParser();
         const xml = parser.parseFromString(event.body, 'text/xml');
         event = event.clone({ body: this.xml2jsonService.xmlToJson(xml) });
