@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BooksearchService } from '../booksearch.service';
 import { switchMap } from 'rxjs/operators';
 
@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-public bookResults: any = [];
+ @Input() goodreadsResults: Event;
 
   constructor(public booksearchservice: BooksearchService) {
    }
@@ -18,4 +18,5 @@ public bookResults: any = [];
 
   ngOnInit() {
   }
+
 }

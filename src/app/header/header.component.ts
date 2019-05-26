@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { BooksearchService } from '../booksearch.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+
+  searchTerm: any;
+  goodreadsResults: Observable<any>;
+  form = new FormGroup ({
+    search: new FormControl(),
+  });
+
+  @Output() sendResults = new EventEmitter();
+
+
+
+onClick() {
+  this.goodreadsResults = this.booksearchservice.getBooks(this.searchTerm);
+  this.sendResults.emit(this.goodreadsResults);
+}
+
+constructor(public booksearchservice: BooksearchService) { }
+
+
+ngOnInit()  {
+  this.searchTerm = this.form.get('search').valueChanges;
   }
-
 }

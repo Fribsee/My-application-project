@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Project';
+  public goodreadsResults;
+
+  resultsSent(event: Event) {
+    this.goodreadsResults = event;
+  }
 }

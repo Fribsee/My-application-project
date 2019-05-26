@@ -9,7 +9,6 @@ import { LinksComponent } from './links/links.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BestSellersService } from './bestsellers.service';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
-import { BooksearchComponent } from './header/booksearch/booksearch.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { BooksearchService } from './booksearch.service';
@@ -24,7 +23,6 @@ import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
     LinksComponent,
     BestSellersComponent,
     RecommendationsComponent,
-    BooksearchComponent,
     SearchResultsComponent
   ],
   imports: [
