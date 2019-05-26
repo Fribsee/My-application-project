@@ -16,8 +16,7 @@ export class BooksearchComponent implements OnInit {
   });
 
   onClick() {
-  //  this.booksearchservice.getBooks(this.form.get('search').value);
-  this.results = this.booksearchservice.getAuthors(this.goodreadsData);
+  this.results = this.booksearchservice.getBooks(this.goodreadsData);
   }
   constructor(public booksearchservice: BooksearchService) { }
 
