@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BooksearchService } from '../booksearch.service';
 import { switchMap } from 'rxjs/operators';
+import { Z_RLE } from 'zlib';
 
 
 
@@ -10,11 +11,10 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
- @Input() goodreadsResults: Event;
+ @Input() goodreadsResults;
 
   constructor(public booksearchservice: BooksearchService) {
    }
-
 
   ngOnInit() {
   }

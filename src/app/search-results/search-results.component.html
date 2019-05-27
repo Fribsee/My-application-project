@@ -1,4 +1,8 @@
-<p>
-<!-- {{booksearchservice.goodreadsData | json}} -->
-{{ goodreadsResults | async}}
-</p>
+
+ <div *ngIf="goodreadsResults | async">
+     <p>Here are your recommendations</p>
+     <ul *ngFor="let result of (goodreadsResults | async)?.GoodreadsResponse.search.results.work">
+           <li>{{result.best_book.title}} </li>
+    </ul>
+ </div> 
+

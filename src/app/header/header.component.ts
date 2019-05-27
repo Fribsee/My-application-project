@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
 
   searchTerm: any;
-  goodreadsResults: Observable<any>;
+  goodreadsResults: any = [];
   form = new FormGroup ({
     search: new FormControl(),
   });
@@ -24,7 +24,11 @@ export class HeaderComponent implements OnInit {
 
 onClick() {
   this.searchTerm = this.form.get('search').value;
+
   this.goodreadsResults = this.booksearchservice.getBooks(this.searchTerm);
+
+  this.booksearchservice.getBooks(this.searchTerm).subscribe(data => {console.log('goodreads data', data); });
+  // this.booksearchservice.getBooks(this.searchTerm).subscribe(data => this.goodreadsResults = data);
   this.sendResults.emit(this.goodreadsResults);
 }
 
@@ -32,6 +36,6 @@ constructor(public booksearchservice: BooksearchService) { }
 
 
 ngOnInit()  {
-  // this.searchTerm = this.form.get('search').valueChanges;
+
   }
 }
