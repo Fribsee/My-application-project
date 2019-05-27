@@ -1,8 +1,10 @@
 
  <div *ngIf="goodreadsResults | async">
-     <p>Here are your recommendations</p>
+     <p>Goodreads Search Results</p>
      <ul *ngFor="let result of (goodreadsResults | async)?.GoodreadsResponse.search.results.work">
-           <li>{{result.best_book.title}} </li>
-    </ul>
+           <li><img class = "img img-thumbnail" [src] ="sanitize(result.best_book.small_image_url)">
+               {{result.best_book.title}} 
+            </li>
+     </ul>
  </div> 
 

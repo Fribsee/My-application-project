@@ -28,7 +28,6 @@ onClick() {
   this.goodreadsResults = this.booksearchservice.getBooks(this.searchTerm);
 
   this.booksearchservice.getBooks(this.searchTerm).subscribe(data => {console.log('goodreads data', data); });
-  // this.booksearchservice.getBooks(this.searchTerm).subscribe(data => this.goodreadsResults = data);
   this.sendResults.emit(this.goodreadsResults);
 }
 

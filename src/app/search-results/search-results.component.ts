@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BooksearchService } from '../booksearch.service';
-import { switchMap } from 'rxjs/operators';
-import { Z_RLE } from 'zlib';
-
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -13,10 +11,15 @@ import { Z_RLE } from 'zlib';
 export class SearchResultsComponent implements OnInit {
  @Input() goodreadsResults;
 
-  constructor(public booksearchservice: BooksearchService) {
+  constructor(public booksearchservice: BooksearchService, private sanitizer: DomSanitizer) {
    }
+   sanitizedUrl: any;
+
 
   ngOnInit() {
+    this.sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl('Notes://MYSERVER/C1256D3B004057E8');
   }
-
+  sanitize(url: string) {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
+  }
 }

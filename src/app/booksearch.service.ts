@@ -17,13 +17,8 @@ export class BooksearchService {
   constructor(private http: HttpClient) {
   }
 
-  // getBooks(searchTerm: string) {
-  //     this.http
-  //       .get(this.goodreadsUrl + searchTerm)
-  //       .subscribe(response =>
-  //       this.goodreadsData = response);
-  //     }
-  }
+
+}
 
 
 
