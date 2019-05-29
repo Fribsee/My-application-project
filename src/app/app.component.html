@@ -1,6 +1,7 @@
 
-<app-header (sendResults)= "resultsSent($event)"></app-header>
-<div class="container-fluid">
+<app-header (sendResults)= "resultsSent($event)"
+            (sendlibResults)= "searchSent($event)"></app-header>
+<div class="container-fluid margin">
   <div class="row">
     <span class="col-sm-2">
       <app-books></app-books>
@@ -14,7 +15,7 @@
   </div>
   <div class="row">
       <span class="col-sm-6">
-          <app-recommendations [goodreadsResults]="goodreadsResults"></app-recommendations>
+          <app-recommendations [libResults]="libResults"></app-recommendations>
         </span>
         <span class="col-sm-3">
           <app-links></app-links>

@@ -9,12 +9,11 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
- @Input() goodreadsResults;
+ @Input() goodreadsResults: any;
 
   constructor(public booksearchservice: BooksearchService, private sanitizer: DomSanitizer) {
    }
    sanitizedUrl: any;
-
 
   ngOnInit() {
     this.sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl('Notes://MYSERVER/C1256D3B004057E8');
