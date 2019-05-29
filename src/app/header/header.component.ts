@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
   });
 
   @Output() sendResults = new EventEmitter();
-  @Output() sendlibResults = new EventEmitter();
 
 
 
@@ -32,7 +31,6 @@ onClick() {
   this.openlibraryservice.getResults(this.searchTerm);
   this.booksearchservice.getBooks(this.searchTerm).subscribe(data => {console.log('goodreads data', data); });
   this.sendResults.emit(this.goodreadsResults);
-  this.sendlibResults.emit(this.libResults);
 }
 
 constructor(public booksearchservice: BooksearchService, public openlibraryservice: OpenLibraryService) { }

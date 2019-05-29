@@ -1,12 +1,13 @@
 
- <div *ngIf="goodreadsResults | async">
+ <div *ngIf="(goodreadsResults | async); else nodata">
      <h4>Goodreads Book Search Results:</h4>
      <ul *ngFor="let result of (goodreadsResults | async)?.GoodreadsResponse.search.results.work"
          style="list-style-type:none;">
         <li>
             <p>
                 <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)">
-                {{result.best_book.title}} </p>
+                {{result.best_book.title}} 
+            </p>
            
             <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">Add to my books
@@ -17,9 +18,13 @@
                     <li><a href="#">Currently Reading</a></li>
                     <li><a href="#">Read</a></li>
                 </ul>
-            </div>
+            </div> 
         </li>
      </ul>
  </div> 
+ <ng-template #nodata>
+    <p>No result found.</p>
+    <!-- add a loading state -->
+</ng-template>  
 
  

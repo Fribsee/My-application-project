@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { OpenLibraryService } from '../open-library.service';
 
 
 @Component({
@@ -7,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./recommendations.component.css']
 })
 export class RecommendationsComponent implements OnInit {
-  // @Input() goodreadsResults;
-  @Input() libResults: any;
+  libResults = this.openlibraryservice.results;
 
-  constructor() { }
+
+  constructor(private openlibraryservice: OpenLibraryService) { }
 
   ngOnInit() {
   }
