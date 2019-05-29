@@ -2,12 +2,15 @@
   <div class="row">
     <h2>New York Times Bestsellers</h2><hr>
       <div *ngFor="let book of bestsellers?.results?.books">
+        <div>
         {{ book.rank }}.
-       <a href= "{{ book.amazon_product_url }}"> {{ book.title }}
-        <br>
-        <div class="indent"> by {{ book.author }}</div> 
-        <img class="img img-thumbnail" src= "{{ book.book_image }}"> </a> 
-      </div>
+       <a href= "{{ book.amazon_product_url }}"> 
+           <img class="img img-thumbnail" src= "{{ book.book_image }}" alt= "No image found">
+           <div class="text-left"> {{ book.title }}</div> 
+           <div class="text-right"> by {{ book.author }}</div> <br>
+      </a> 
+    </div>
+  </div>
   </div>
 </div>  
 

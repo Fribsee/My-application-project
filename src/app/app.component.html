@@ -2,26 +2,22 @@
 <app-header (sendResults)= "resultsSent($event)"></app-header>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3">
+    <span class="col-sm-2">
       <app-books></app-books>
-    </div>
-    <div class="col-sm-6">
+    </span>
+    <span class="col-sm-8">
       <app-search-results [goodreadsResults]="goodreadsResults"></app-search-results>
-    </div>
-    <div class="col-sm-6">
-      <app-recommendations [goodreadsResults]="goodreadsResults"></app-recommendations>
-    </div>
-    <div class="col-sm-3">
-      <app-links></app-links>
-    </div>
+    </span>
+    <span class="col-sm-2">
+        <app-bestsellers></app-bestsellers>
+      </span>
   </div>
   <div class="row">
-    <div class="col-sm-3">
+      <span class="col-sm-6">
+          <app-recommendations [goodreadsResults]="goodreadsResults"></app-recommendations>
+        </span>
+        <span class="col-sm-3">
+          <app-links></app-links>
+        </span>
     </div>
-    <div class="col-sm-6">
-    </div>
-    <div class="col-sm-3">
-      <app-bestsellers></app-bestsellers>
-    </div>
-  </div>
 </div>

@@ -1,9 +1,7 @@
-.indent {
-    text-indent: 3em;
-}
+
 
 .img {
-    width: 100%;
+    width: 30%;
     max-width: 9em;
     height: auto;
     margin-bottom: 5%;

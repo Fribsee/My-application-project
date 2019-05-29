@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
 
 
-  searchTerm: any;
+  searchTerm: 'classics';
   goodreadsResults: any = [];
   form = new FormGroup ({
     search: new FormControl(),
@@ -24,9 +24,7 @@ export class HeaderComponent implements OnInit {
 
 onClick() {
   this.searchTerm = this.form.get('search').value;
-
   this.goodreadsResults = this.booksearchservice.getBooks(this.searchTerm);
-
   this.booksearchservice.getBooks(this.searchTerm).subscribe(data => {console.log('goodreads data', data); });
   this.sendResults.emit(this.goodreadsResults);
 }
