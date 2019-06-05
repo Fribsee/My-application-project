@@ -8,13 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My Project';
   public goodreadsResults;
-  public libResults;
 
   resultsSent(event: Event) {
     this.goodreadsResults = event;
   }
 
-  searchSent(event: Event) {
-    this.libResults = event;
-  }
 }

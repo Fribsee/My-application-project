@@ -5,8 +5,10 @@
          style="list-style-type:none;">
         <li>
             <p>
-                <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)">
-                {{result.best_book.title}} 
+                <a href="https://www.goodreads.com/book/show/{{result.best_book.id}}.{{result.best_book.title}}?from_search=true">
+                    <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)">
+                    {{result.best_book.title}} 
+                </a>
             </p>
            
             <div class="dropdown">

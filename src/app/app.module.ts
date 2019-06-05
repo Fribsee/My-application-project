@@ -13,7 +13,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { BooksearchService } from './booksearch.service';
 import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
-import { OpenLibraryService } from './open-library.service';
 
 
 @NgModule({
@@ -33,7 +32,7 @@ import { OpenLibraryService } from './open-library.service';
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: XML2JsonInterceptorService, multi: true },
-     BestSellersService, BooksearchService, OpenLibraryService
+     BestSellersService, BooksearchService
     ],
   bootstrap: [AppComponent]
 })
