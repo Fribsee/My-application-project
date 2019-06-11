@@ -10,3 +10,14 @@
 .flex {
     display: flex;
 }
+
+.title {
+    color: black;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.author {
+    color: #255355;
+
+}
