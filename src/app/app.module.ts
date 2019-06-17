@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BooksComponent } from './books/books.component';
 import { BestSellersComponent } from './bestsellers/bestsellers.component';
-import { LinksComponent } from './links/links.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BestSellersService } from './bestsellers.service';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
@@ -20,7 +19,6 @@ import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
     AppComponent,
     HeaderComponent,
     BooksComponent,
-    LinksComponent,
     BestSellersComponent,
     RecommendationsComponent,
     SearchResultsComponent

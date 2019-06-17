@@ -1,34 +1,32 @@
 
  <div>
-    <div *ngIf="(goodreadsResults | async); else nodata">
+    <div *ngIf="goodreadsResults | async; else loading">
         <h4>Goodreads Book Search Results:</h4>
         <ul *ngFor="let result of (goodreadsResults | async)?.GoodreadsResponse.search.results.work"
          style="list-style-type:none;">
             <li>
                 <p>
-                    <a href="https://www.goodreads.com/book/show/{{result.best_book.id}}.{{result.best_book.title}}?from_search=true">
+                    <!-- <a href="https://www.goodreads.com/book/show/{{result.best_book.id}}.{{result.best_book.title}}?from_search=true" class="font">
+                        <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)"> -->
+                    <a href="https://www.goodreads.com/book/title?id={{result.best_book.title}}" class="font">
                         <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)">
-                        {{result.best_book.title}} 
+                        {{result.best_book.title}} <span class="author">by {{result.best_book.author.name}}</span>
                     </a>
                 </p>
-           
                 <div class="dropdown">
                     <button class="dropdown-toggle" type="button" data-toggle="dropdown">Add to my books
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">To Read</a></li>
+                        <li><a (click)="addtoRead( ' ' + result.best_book.title + ' by ' + result.best_book.author.name)" href="#">To Read</a></li>
                         <li><a href="#">Currently Reading</a></li>
                         <li><a href="#">Read</a></li>
                     </ul>
                 </div> 
             </li>
         </ul>
-    </div> 
-    <ng-template #nodata>
-        <p>No result found.</p>
-        <!-- add a loading state -->
-    </ng-template>  
+    </div>
+    <ng-template #loading>loading...</ng-template>
 </div>
 
  

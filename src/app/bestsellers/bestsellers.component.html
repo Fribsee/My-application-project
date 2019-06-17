@@ -8,9 +8,19 @@
             <img class="img img-thumbnail" src= "{{ book.book_image }}" alt= "No image found">
             <p class="title"> {{ book.title }}</p> 
             <p class="author"> by {{ book.author }}</p> <br>
-          </a> 
+          </a>
+        </div>
+          <div class="dropdown">
+              <button class="dropdown-toggle" type="button" data-toggle="dropdown">Add to my books
+                  <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                  <li><a (click)="addtoRead( ' ' + book.title + ' by ' + book.author )" href="#">To Read</a></li>
+                  <li><a (click)="addtoRead( ' ' + book.title + ' by ' + book.author )"href="#">Currently Reading</a></li>
+                  <li><a href="#">Read</a></li>
+              </ul>
+          </div> 
       </div>
-  </div>
   </div>
 </div>  
 

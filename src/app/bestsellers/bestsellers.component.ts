@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BestSellersService } from '../bestsellers.service';
+import { MybooksService } from '../mybooks.service';
 
 @Component({
   selector: 'app-bestsellers',
@@ -9,7 +10,13 @@ import { BestSellersService } from '../bestsellers.service';
 export class BestSellersComponent implements OnInit {
   public bestsellers: any = [];
 
-  constructor(private bestSellersService: BestSellersService) {
+  addtoRead(title: any) {
+    this.mybooksService.toReadList.push(title);
+    alert(this.mybooksService.toReadList);
+
+  }
+
+  constructor(private bestSellersService: BestSellersService, private mybooksService: MybooksService) {
 
   }
 

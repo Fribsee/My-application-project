@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   searchTerm: any;
   goodreadsResults: any = [];
-  libResults: any = [];
+  defaultResults: any = [];
   form = new FormGroup ({
     search: new FormControl(),
   });
