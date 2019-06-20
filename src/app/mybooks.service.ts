@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MyBooks } from './mybooks.model';
 
 
 
@@ -6,13 +7,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MybooksService {
-  toReadList: any = [];
+  toReadList: MyBooks[] = [];
 
-  addtoRead(title: any) {
-    this.toReadList.push(title);
-    alert(this.toReadList);
-
-  }
+  // addtoRead(title: string, author: string, url: string, img: string) {
+  //   this.toReadList.push(new MyBooks(title, author, img, url));
+  //   alert(this.toReadList);
+  // }
 
   constructor() { }
 }

@@ -6,17 +6,27 @@
     height: auto;
 }
 
-.flex {
+.display {
     display: flex;
+    text-align: start;
 }
 
 .title {
     color: black;
-    font-size: 110%;
     font-weight: bold;
 }
 
 .author {
     color: #255355;
 
+}
+
+.bestseller {
+    line-height: initial;
+    text-align: left;
+    text-indent: 5%;
+}
+
+.dropdown {
+    align-self: flex-start;
 }

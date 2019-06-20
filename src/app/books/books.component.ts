@@ -8,7 +8,7 @@ import { MybooksService } from '../mybooks.service';
 })
 
 export class BooksComponent implements OnInit {
-  toRead: any [];
+  toRead = this.mybooksService.toReadList;
 
 
 
@@ -17,7 +17,7 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mybooksService.toReadList
-    .subscribe(data => this.toRead = data);
+    // this.mybooksService.toReadList
+    // .subscribe(data => this.toRead = data);
   }
 }

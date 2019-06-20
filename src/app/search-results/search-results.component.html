@@ -1,7 +1,7 @@
 
  <div>
     <div *ngIf="goodreadsResults | async; else loading">
-        <h4>Goodreads Book Search Results:</h4>
+        <h2>Goodreads Book Search Results:</h2>
         <ul *ngFor="let result of (goodreadsResults | async)?.GoodreadsResponse.search.results.work"
          style="list-style-type:none;">
             <li>

@@ -1,18 +1,19 @@
-<div>
-  <div>
-  <h1 class>
+
+  <h2>
   My Books
-  </h1>
-</div>
-  <div class="read">
+  </h2><hr>
+  <h4 class="read">
     <a href="#" class="font"> Currently Reading</a>
-  </div> 
-  <div class="read">
+  </h4> 
+  <h4 class="read">
     <a href="#" class="font"> To Read</a>
-    <p>{{ toRead | async}}</p>
-  </div> 
-  <div class="read">
+    <div *ngFor='let book of toRead' >
+        <p class="title">
+          <img class = "img img-thumbnail" [src] ="book.img">{{ book.title}}
+        </p>
+    </div>
+  </h4> 
+  <h4 class="read">
     <a href="#" class="font"> Read</a>
-  </div> 
-</div>
+  </h4>
 
