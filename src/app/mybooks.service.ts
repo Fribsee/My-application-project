@@ -8,11 +8,9 @@ import { MyBooks } from './mybooks.model';
 })
 export class MybooksService {
   toReadList: MyBooks[] = [];
+  currentReadList: MyBooks[] = [];
+  haveReadList: MyBooks[] = [];
 
-  // addtoRead(title: string, author: string, url: string, img: string) {
-  //   this.toReadList.push(new MyBooks(title, author, img, url));
-  //   alert(this.toReadList);
-  // }
 
   constructor() { }
 }

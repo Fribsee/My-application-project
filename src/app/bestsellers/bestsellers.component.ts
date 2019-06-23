@@ -11,9 +11,14 @@ import { MyBooks } from '../mybooks.model';
 export class BestSellersComponent implements OnInit {
   public bestsellers: any = [];
 
-  addtoRead(title: string, author: string, url: string, img: string) {
+  addtoRead(title: string, author: string, img: string, url: string) {
     this.mybooksService.toReadList.push(new MyBooks(title, author, img, url));
-    alert(this.mybooksService.toReadList);
+  }
+    addCurrent(title: string, author: string, img: string, url: string) {
+    this.mybooksService.currentReadList.push(new MyBooks(title, author, img, url));
+  }
+    addRead(title: string, author: string, img: string, url: string) {
+    this.mybooksService.haveReadList.push(new MyBooks(title, author, img, url));
   }
 
   constructor(private bestSellersService: BestSellersService, private mybooksService: MybooksService) {

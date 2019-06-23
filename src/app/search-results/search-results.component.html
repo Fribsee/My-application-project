@@ -6,8 +6,6 @@
          style="list-style-type:none;">
             <li>
                 <p>
-                    <!-- <a href="https://www.goodreads.com/book/show/{{result.best_book.id}}.{{result.best_book.title}}?from_search=true" class="font">
-                        <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)"> -->
                     <a href="https://www.goodreads.com/book/title?id={{result.best_book.title}}" class="font">
                         <img class = "img img-thumbnail" [src] ="sanitize(result.best_book.image_url)">
                         {{result.best_book.title}} <span class="author">by {{result.best_book.author.name}}</span>
@@ -18,9 +16,9 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a (click)="addtoRead( ' ' + result.best_book.title + ' by ' + result.best_book.author.name)" href="#">To Read</a></li>
-                        <li><a href="#">Currently Reading</a></li>
-                        <li><a href="#">Read</a></li>
+                        <li><a (click)="addtoRead(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title)" href="#">To Read</a></li>
+                        <li><a (click)="addCurrent(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title)" href="#">Currently Reading</a></li>
+                        <li><a (click)="addRead(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title)" href="#">Read</a></li>
                     </ul>
                 </div> 
             </li>

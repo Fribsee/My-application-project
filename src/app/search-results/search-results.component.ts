@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators } from '@angular/forms';
 import { BooksearchService } from '../booksearch.service';
 import { MybooksService } from '../mybooks.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MyBooks } from '../mybooks.model';
 
 
 
@@ -16,10 +17,16 @@ export class SearchResultsComponent implements OnInit {
   @Input() goodreadsResults: any;
    sanitizedUrl: any;
 
-   addtoRead(title: any) {
-    this.mybooksService.toReadList.push(title);
-    alert(this.mybooksService.toReadList);
-  }
+
+  addtoRead(title: string, author: string, img: string, url: string) {
+  this.mybooksService.toReadList.push(new MyBooks(title, author, img, url));
+}
+  addCurrent(title: string, author: string, img: string, url: string) {
+  this.mybooksService.currentReadList.push(new MyBooks(title, author, img, url));
+}
+  addRead(title: string, author: string, img: string, url: string) {
+  this.mybooksService.haveReadList.push(new MyBooks(title, author, img, url));
+}
 
   constructor(public booksearchservice: BooksearchService, private sanitizer: DomSanitizer, private mybooksService: MybooksService) {
    }

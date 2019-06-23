@@ -15,9 +15,9 @@
                   <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                  <li><a (click)="addtoRead(book.title,book.author,book.amazon_product_url,book.book_image )" href="#">To Read</a></li>
-                  <li><a (click)="addtoRead(book.title,book.author,book.amazon_product_url,book.book_image)"href="#">Currently Reading</a></li>
-                  <li><a href="#">Read</a></li>
+                  <li><a (click)="addtoRead(book.title,book.author,book.book_image, book.amazon_product_url)" href="#">To Read</a></li>
+                  <li><a (click)="addCurrent(book.title,book.author,book.book_image, book.amazon_product_url)"href="#">Currently Reading</a></li>
+                  <li><a (click)="addRead(book.title,book.author,book.book_image, book.amazon_product_url)"href="#">Read</a></li>
               </ul>
           </div> 
       </div>

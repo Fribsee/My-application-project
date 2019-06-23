@@ -3,11 +3,17 @@
   My Books
   </h2><hr>
   <h4 class="read">
-    <a href="#" class="font"> Currently Reading</a>
-  </h4> 
+      <a href="#" class="font"> To Read</a>
+      <div *ngFor='let book of toRead | slice:0:3' >
+          <p class="title">
+            <img class = "img img-thumbnail" [src] ="book.img">{{ book.title}}
+          </p>
+      </div>
+    </h4> 
+ 
   <h4 class="read">
-    <a href="#" class="font"> To Read</a>
-    <div *ngFor='let book of toRead' >
+    <a href="#" class="font"> Currently Reading</a>
+    <div *ngFor='let book of currentRead| slice:0:3' >
         <p class="title">
           <img class = "img img-thumbnail" [src] ="book.img">{{ book.title}}
         </p>
@@ -15,5 +21,10 @@
   </h4> 
   <h4 class="read">
     <a href="#" class="font"> Read</a>
+    <div *ngFor='let book of read | slice:0:3' >
+        <p class="title">
+          <img class = "img img-thumbnail" [src] ="book.img">{{ book.title}}
+        </p>
+    </div>
   </h4>
 
