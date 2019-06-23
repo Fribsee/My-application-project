@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { BooksearchService } from './booksearch.service';
 import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
+import { TitlecasePipe } from './titlecase.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
     BooksComponent,
     BestSellersComponent,
     RecommendationsComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    TitlecasePipe
   ],
   imports: [
     BrowserModule,

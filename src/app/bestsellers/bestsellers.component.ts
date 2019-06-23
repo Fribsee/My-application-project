@@ -11,7 +11,7 @@ import { MyBooks } from '../mybooks.model';
 export class BestSellersComponent implements OnInit {
   public bestsellers: any = [];
 
-  addtoRead(title: string, author: string, img: string, url: string) {
+    addtoRead(title: string, author: string, img: string, url: string) {
     this.mybooksService.toReadList.push(new MyBooks(title, author, img, url));
   }
     addCurrent(title: string, author: string, img: string, url: string) {

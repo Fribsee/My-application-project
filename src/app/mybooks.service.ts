@@ -11,6 +11,5 @@ export class MybooksService {
   currentReadList: MyBooks[] = [];
   haveReadList: MyBooks[] = [];
 
-
   constructor() { }
 }

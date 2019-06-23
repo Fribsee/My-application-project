@@ -14,6 +14,9 @@ import { MyBooks } from '../mybooks.model';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
+
+  constructor(public booksearchservice: BooksearchService, private sanitizer: DomSanitizer, private mybooksService: MybooksService) {
+   }
   @Input() goodreadsResults: any;
    sanitizedUrl: any;
 
@@ -28,8 +31,6 @@ export class SearchResultsComponent implements OnInit {
   this.mybooksService.haveReadList.push(new MyBooks(title, author, img, url));
 }
 
-  constructor(public booksearchservice: BooksearchService, private sanitizer: DomSanitizer, private mybooksService: MybooksService) {
-   }
 
   ngOnInit() {
     this.sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl('Notes://MYSERVER/C1256D3B004057E8');
