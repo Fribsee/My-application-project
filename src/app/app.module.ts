@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BooksComponent } from './books/books.component';
 import { BestSellersComponent } from './bestsellers/bestsellers.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BestSellersService } from './bestsellers.service';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { BooksearchService } from './booksearch.service';
 import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
 import { TitlecasePipe } from './titlecase.pipe';
+
+
 
 
 @NgModule({
@@ -23,12 +26,12 @@ import { TitlecasePipe } from './titlecase.pipe';
     BestSellersComponent,
     RecommendationsComponent,
     SearchResultsComponent,
-    TitlecasePipe
+    TitlecasePipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: XML2JsonInterceptorService, multi: true },

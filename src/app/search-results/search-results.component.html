@@ -16,9 +16,9 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a (click)="addtoRead(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title)" href="#">To Read</a></li>
-                        <li><a (click)="addCurrent(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title)" href="#">Currently Reading</a></li>
-                        <li><a (click)="addRead(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title)" href="#">Read</a></li>
+                        <li><a (click)="addtoList(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title, 'to read')" href="#">To Read</a></li>
+                        <li><a (click)="addtoList(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title, 'currently reading')" href="#">Currently Reading</a></li>
+                        <li><a (click)="addtoList(result.best_book.title,result.best_book.author.name, sanitize(result.best_book.image_url), 'https://www.goodreads.com/book/title?id=' +result.best_book.title, 'read')" href="#">Read</a></li>
                     </ul>
                 </div> 
             </li>

@@ -17,3 +17,7 @@ img {
 .title {
     font-size: 70%;
 }
+
+hr {
+    border-top: 1px solid brown;
+}

@@ -14,10 +14,13 @@
 .title {
     color: black;
     font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .author {
     color: #255355;
+    margin: 0%;
 
 }
 
@@ -29,4 +32,9 @@
 
 .dropdown {
     align-self: flex-start;
+    margin-bottom: 7%;
+}
+
+hr {
+    border-top: 1px solid brown;
 }
