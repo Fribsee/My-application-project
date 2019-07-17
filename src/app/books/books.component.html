@@ -4,7 +4,7 @@
   </h2><hr>
   <h4 class="read">
       <a href="#" class="font"> To Read</a>
-      <div *ngFor='let book of toRead ' >
+      <div *ngFor='let book of toRead' >
           <p *ngIf="book.list ==='to read'" class="title">
             <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase }}
           </p>

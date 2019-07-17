@@ -30,6 +30,10 @@
     text-indent: 5%;
 }
 
+.bestseller:hover {
+    font-size: 115%;
+}
+
 .dropdown {
     align-self: flex-start;
     margin-bottom: 7%;

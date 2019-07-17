@@ -2,8 +2,11 @@
     margin: 5%;
     padding: 5%;
     color: #255355;
-
 }
+
+.read:hover {
+    font-size: 140%;
+  }
 
 .font {
     color: #255355;

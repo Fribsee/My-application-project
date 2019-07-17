@@ -12,5 +12,11 @@
 .author {
     font-size: 80%;
     color: #255355;
-    
+}
+
+.welcome {
+    font-size: 350%;
+    font-weight: bold;
+    color: #255355;
+  
 }

@@ -1,6 +1,6 @@
 
  <div>
-    <div *ngIf="goodreadsResults | async; else loading">
+    <div *ngIf="goodreadsResults | async; else welcome">
         <h2>Goodreads Book Search Results:</h2>
         <ul *ngFor="let result of (goodreadsResults | async)?.GoodreadsResponse.search.results.work"
          style="list-style-type:none;">
@@ -24,7 +24,9 @@
             </li>
         </ul>
     </div>
-    <ng-template #loading>loading...</ng-template>
+    <ng-template #welcome>
+        <p class="welcome">Welcome to Book Shelf!</p>
+    </ng-template>
 </div>
 
  
