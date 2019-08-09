@@ -5,7 +5,7 @@
   </h2><hr>
   <h4 class="read">
       <a href="#" class="font"> To Read</a>
-      <div *ngFor='let book of toRead' >
+      <div *ngFor='let book of booksList' >
           <p *ngIf="book.list ==='to read'" class="title">
             <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase }}
           </p>
@@ -14,7 +14,7 @@
  
   <h4 class="read">
     <a href="#" class="font"> Currently Reading</a>
-    <div *ngFor='let book of toRead' >
+    <div *ngFor='let book of booksList' >
         <p *ngIf="book.list ==='currently reading'"class="title">
           <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
         </p>
@@ -22,24 +22,9 @@
   </h4> 
   <h4 class="read">
     <a href="#" class="font"> Read</a>
-    <div *ngFor='let book of toRead' >
+    <div *ngFor='let book of booksList' >
         <p *ngIf="book.list ==='read'"class="title">
           <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
         </p>
     </div>
   </h4>
-
-
-  <!-- <h4 class="read">
-      <a href="#" class="font"> To Read</a></h4>
-       <ul *ngFor="let book of toRead | slice:0:3">
-  <li *ngIf="book.list ==='to read'"
-      class="text-success"> <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
-  </li>
-  <li *ngIf="book.list ==='currently reading'"
-      class="text-success"> <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
-  </li>
-  <li *ngIf="book.list ==='read'"
-      class="text-success"> <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
-  </li>
-</ul> -->

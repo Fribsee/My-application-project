@@ -8,7 +8,7 @@ import { MybooksService } from '../mybooks.service';
 })
 
 export class BooksComponent implements OnInit {
-  toRead = this.mybooksService.readList;
+  booksList = this.mybooksService.readList;
 
 
   constructor(private mybooksService: MybooksService) {
