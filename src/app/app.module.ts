@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +15,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { BooksearchService } from './booksearch.service';
 import { XML2JsonInterceptorService } from './xml2-json-interceptor.service';
 import { TitlecasePipe } from './titlecase.pipe';
+
 
 
 
@@ -32,6 +34,7 @@ import { TitlecasePipe } from './titlecase.pipe';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: XML2JsonInterceptorService, multi: true },

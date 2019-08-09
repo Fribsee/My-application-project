@@ -21,19 +21,8 @@ export class SearchResultsComponent implements OnInit {
    sanitizedUrl: any;
 
    addtoList(title: string, author: string, img: string, url: string, list: string) {
-    this.mybooksService.toReadList.push(new MyBooks(title, author, img, url, list));
+    this.mybooksService.readList.push(new MyBooks(title, author, img, url, list));
   }
-
-
-//   addtoRead(title: string, author: string, img: string, url: string, list: string) {
-//   this.mybooksService.toReadList.push(new MyBooks(title, author, img, url, list));
-// }
-//   addCurrent(title: string, author: string, img: string, url: string, list: string) {
-//   this.mybooksService.currentReadList.push(new MyBooks(title, author, img, url, list));
-// }
-//   addRead(title: string, author: string, img: string, url: string, list: string) {
-//   this.mybooksService.haveReadList.push(new MyBooks(title, author, img, url, list));
-// }
 
   ngOnInit() {
     this.sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl('Notes://MYSERVER/C1256D3B004057E8');

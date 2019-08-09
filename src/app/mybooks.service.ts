@@ -7,9 +7,8 @@ import { MyBooks } from './mybooks.model';
   providedIn: 'root'
 })
 export class MybooksService {
-  toReadList: MyBooks[] = [];
-  currentReadList: MyBooks[] = [];
-  haveReadList: MyBooks[] = [];
+  readList: MyBooks[] = [];
+
 
   constructor() { }
 }

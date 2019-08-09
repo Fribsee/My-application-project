@@ -12,14 +12,8 @@ export class BestSellersComponent implements OnInit {
   public bestsellers: any = [];
 
     addtoList(title: string, author: string, img: string, url: string, list: string) {
-    this.mybooksService.toReadList.push(new MyBooks(title, author, img, url, list));
+    this.mybooksService.readList.push(new MyBooks(title, author, img, url, list));
   }
-  //   addCurrent(title: string, author: string, img: string, url: string, list: string) {
-  //   this.mybooksService.currentReadList.push(new MyBooks(title, author, img, url, list));
-  // }
-  //   addRead(title: string, author: string, img: string, url: string, list: string) {
-  //   this.mybooksService.haveReadList.push(new MyBooks(title, author, img, url, list));
-  // }
 
   constructor(private bestSellersService: BestSellersService, private mybooksService: MybooksService) {
 
