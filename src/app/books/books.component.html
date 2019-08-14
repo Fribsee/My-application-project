@@ -1,10 +1,10 @@
 
   <div>
-  <h2>
-  My Books
-  </h2><hr>
-  <h4 class="read">
-      <a href="#" class="font"> To Read</a>
+    <h2>
+    My Books
+   </h2><hr>
+    <h4 class="read">
+      <a href="#" id="toRead" class="font"> To Read</a>
       <div *ngFor='let book of booksList' >
           <p *ngIf="book.list ==='to read'" class="title">
             <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase }}
@@ -12,19 +12,19 @@
       </div>
     </h4> 
  
-  <h4 class="read">
-    <a href="#" class="font"> Currently Reading</a>
-    <div *ngFor='let book of booksList' >
+    <h4 class="read">
+      <a href="#" class="font"> Currently Reading</a>
+      <div *ngFor='let book of booksList' >
         <p *ngIf="book.list ==='currently reading'"class="title">
           <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
         </p>
-    </div>
-  </h4> 
-  <h4 class="read">
-    <a href="#" class="font"> Read</a>
-    <div *ngFor='let book of booksList' >
+      </div>
+    </h4> 
+    <h4 class="read">
+      <a href="#" class="font"> Read</a>
+      <div *ngFor='let book of booksList' >
         <p *ngIf="book.list ==='read'"class="title">
           <img class = "img img-thumbnail" [src] ="book.img">{{ book.title | titlecase}}
         </p>
-    </div>
-  </h4>
+      </div>
+    </h4>
