@@ -12,4 +12,4 @@ export class MyBooks {
         this.url = url;
         this.list = list;
     }
-    }
+}
