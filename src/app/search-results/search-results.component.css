@@ -1,7 +1,8 @@
 
 
-.dropdown-toggle {
-    background-color: #CFD4D6;
+.dropdown-toggle:hover {
+    background-color: darkgray;
+    color: white;
 }
 
 .font {
@@ -15,8 +16,8 @@
 }
 
 .welcome {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 350%;
-    font-weight: bold;
+    font-weight: bolder;
     color: #255355;
-  
 }

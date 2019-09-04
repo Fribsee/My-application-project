@@ -9,12 +9,9 @@ h2 {
     color: #255355;
 }
 
-.read:hover {
-    font-size: 140%;
-  }
-
 .font {
     color: #255355;
+    font-weight: bold;
 }
 
 img {
@@ -28,4 +25,8 @@ img {
 
 hr {
     border-top: 1px solid brown;
+}
+
+a {
+    color: black;
 }

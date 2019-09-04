@@ -34,8 +34,9 @@ h2 {
     text-indent: 5%;
 }
 
-.bestseller:hover {
-    font-size: 115%;
+.dropdown-toggle:hover {
+    background-color: darkgray;
+    color: white;
 }
 
 .dropdown {
@@ -44,5 +45,5 @@ h2 {
 }
 
 hr {
-    border-top: 1px solid brown;
+    border-top: 1px solid rgb(100, 75, 75);
 }

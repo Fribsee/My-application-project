@@ -3,8 +3,8 @@
     <h2>
     My Books
    </h2><hr>
-    <h4 class="read">
-      <a href="#" id="toRead" class="font"> To Read</a>
+    <h4 id="toRead" class="read">
+     <div class="font"> To Read</div>
       <div *ngFor='let book of booksList' >
           <p *ngIf="book.list ==='to read'" class="title">
             <a href="{{ book.url}}" target="_blank">
@@ -15,7 +15,7 @@
     </h4> 
  
     <h4 class="read">
-      <a href="#" class="font"> Currently Reading</a>
+      <div class="font"> Currently Reading</div>
       <div *ngFor='let book of booksList' >
         <p *ngIf="book.list ==='currently reading'"class="title">
           <a href="{{ book.url}}" target="_blank">
@@ -25,7 +25,7 @@
       </div>
     </h4> 
     <h4 class="read">
-      <a href="#" class="font"> Read</a>
+      <div class="font"> Read</div>
       <div *ngFor='let book of booksList' >
         <p *ngIf="book.list ==='read'"class="title">
           <a href="{{ book.url}}" target="_blank">
